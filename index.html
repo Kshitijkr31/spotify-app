@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link href="spotify.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/RKB6HkN.png" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fc8179;
+}
+nav {
+  font-family: "Varela Round", sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  height: 50px;
+  align-items: center;
+  color: #fff;
+  background-color: black;
+}
+
+nav ul li {
+  padding-left: 12px;
+}
+
+.brand img {
+  width: 41px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.bottom {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  height: 80px;
+  background-color: rgb(30 215 96);
+margin-top: 26px;
+  flex-direction: column;
+}
+
+
+.container {
+    margin: 2px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80.5vh;
+  background-color: black;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 15px;
+  background-image: url('https://i.imgur.com/41wdksH.jpeg');
+  background-position: center;
+  
+}
+
+h1{
+    margin-top: 1vw;
+    margin-left: -52vw;
+}
+
+#musicbar {
+  width: 90vw;
+  margin-top: 2px;
+ cursor: pointer;
+  
+}
+
+
+
+
+.icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  width: 27vw;
+}
+.icons i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.icons i img {
+  width: 100%;
+  height: auto;
+}
+
+.songitem{
+border-radius: 62px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 14px 0 0 -45vw;
+    width:30vw;
+    color: #da0406;
+    height: 50px;
+    display: flex;
+    background-color: white;
+}
+.songitem img{
+  border-radius: 32px;
+  margin-left: 2px;
+  width: 43px;
+}
+.songitem i img{
+  border-radius: 0px;
+  margin-left: -45px;
+  width: 34px;
+  cursor: pointer;
+}
+.songinfo{
+ display: contents;
+}
+.songinfo img{
+  margin-left: 57vw;
+  margin-top: -16vw;
+  width: 14vw;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.songinfo p{
+  font-family: "Varela Round", sans-serif;
+  margin-top: 2vw;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  margin-left: 56vw;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .bottom {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 98px;
+    background-color: rgb(30 215 96);
+  margin-top: 26px;
+    flex-direction: column;
+  }
+  
+  
+  .container {
+      margin: 2px auto;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 81.5vh;
+    background-color: black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 15px;
+    background-image: url('https://i.imgur.com/41wdksH.jpeg');
+    background-position: center;
+    
+  }
+  
+  h1{
+      margin-top: 1vw;
+      margin-left: -16vw;
+  }
+  
+  #musicbar {
+    width: 90vw;
+    margin-top: 2px;
+    cursor: pointer;
+   
+    
+  }
+  
+  
+  
+  
+  .icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 52vw;
+  }
+  .icons i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .icons i img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .songitem{
+    border-radius: 62px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 14px 0 0 1vw;
+    width: 79vw;
+    color: #da0406;
+    height: 46px;
+    display: flex;
+    background-color: white;
+  }
+  .songitem img{
+    border-radius: 32px;
+    margin-left: 2px;
+    width: 43px;
+  }
+  .songitem i img{
+    border-radius: 0px;
+    margin-left: -45px;
+    width: 34px;
+    cursor: pointer;
+  }
+  .songinfo{
+   display: contents;
+  }
+  .songinfo img{
+    margin-bottom: -7vw;
+    margin-left: -49vw;
+    margin-top: 0vw;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    width: 31vw;
+  }
+  
+  .songinfo p{
+    font-size: 24px;
+    margin-top: -20vw;
+    margin-left: 46vw;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    font-family: "Varela Round", sans-serif;
+  }
+
+}
+    </style>
+
+</head>
+  <body>
+    <nav>
+      <ul>
+        <li class="brand">
+          <img src="https://i.imgur.com/RKB6HkN.png" alt="Spotify" />Spotify
+        </li>
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="songslist"></div>
+      <h1>Best Hits of Bollywood</h1>
+      <div class="songitem">
+        <img src="https://i.imgur.com/Lb1ONq8.png" alt="songitem" />
+        <span class="songname">Sanam Teri Kasam</span>
+        <span class="songlistdisplay"
+          ><span class="timestamp">05.14</span></span
+        >
+        <i id="0" class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play"
+        /></i>
+      </div>
+      <div class="songitem">
+        <img src="https://i.imgur.com/AzfHsul.png" alt="songitem" />
+        <span class="songname">Aasan Nahin yahan</span>
+        <span class="songlistdisplay"
+          ><span class="timestamp">05.14</span></span
+        >
+        <i id="1" class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play"
+        /></i>
+      </div>
+      <div class="songitem">
+        <img src="https://i.imgur.com/91G4VNt.png" alt="songitem" />
+        <span class="songname">Lo mann liya</span>
+        <span class="songlistdisplay"
+          ><span class="timestamp">05.14</span></span
+        >
+        <i id="2" class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play"
+        /></i>
+      </div>
+      <div class="songitem">
+        <img src="https://i.imgur.com/PI7oMAZ.png" alt="songitem" />
+        <span class="songname">Mat Aazma re</span>
+        <span class="songlistdisplay"
+          ><span class="timestamp">05.14</span></span
+        >
+        <i id="3" class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play"
+        /></i>
+      </div>
+      <div class="songitem">
+        <img src="https://i.imgur.com/AzfHsul.png" alt="songitem" />
+        <span class="songname">Piya aaye na</span>
+        <span class="songlistdisplay"
+          ><span class="timestamp">05.14</span></span
+        >
+        <i id="4" class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play"
+        /></i>
+      </div>
+      <div class="songitem">
+        <img src="https://i.imgur.com/AzfHsul.png" alt="songitem" />
+        <span class="songname">Sunn rha hai</span>
+        <span class="songlistdisplay"
+          ><span class="timestamp">05.14</span></span
+        >
+        <i id="5" class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play"
+        /></i>
+      </div>
+      <div class="songitem">
+        <img src="https://i.imgur.com/AzfHsul.png" alt="songitem" />
+        <span class="songname">Meri aashiqui tum hi ho</span>
+        <span class="songlistdisplay"
+          ><span class="timestamp">05.14</span></span
+        >
+        <i id="6" class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play"
+        /></i>
+      </div>
+
+      <div class="songinfo">
+        <img src="https://i.imgur.com/xAHpZB1.gif" alt="beats" id="infoimage" />
+        <p id="songdesciption">
+          Sanam Teri Kasam - Ankit Tiwari & Palak Muchhaal
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <input
+        type="range"
+        name="range"
+        id="musicbar"
+        min="0"
+        value="0"
+        max="100"
+      />
+      <div class="icons">
+        <i class="fas songitemplay fa-backward"
+          ><img src="https://i.imgur.com/QwWKuW8.png" alt="backward" id="back"
+        /></i>
+        <i class="fas songitemplay fa-play"
+          ><img src="https://i.imgur.com/UES4S3N.png" alt="play" id="masterPlay"
+        /></i>
+        <i class="fas songitemplay fa-forward"
+          ><img src="https://i.imgur.com/kPJaMnY.png" id="next" alt="next"
+        /></i>
+      </div>
+    </div>
+
+    <script>
+        console.log("Welcome to Spotify");
+
+let songIndex = 0;
+let audioElement = new Audio();
+let masterPlay = document.getElementById("masterPlay");
+let musicBar = document.getElementById("musicbar");
+let infoimage = document.getElementById("infoimage");
+let songdesciption = document.getElementById("songdesciption");
+let songitem = Array.from(document.getElementsByClassName("songitem"));
+
+let songs = [
+  {
+    songName: "Sanam Teri Kasam",
+    filePath: "https://pagalnew.com/download128/3747",
+    coverPath: "https://i.imgur.com/Lb1ONq8.png",
+  },
+  {
+    songName: "Aasan Nahin yahan",
+    filePath: "https://pagalnew.com/download128/6031",
+    coverPath: "https://i.imgur.com/AzfHsul.png",
+  },
+  {
+    songName: "Lo mann liya",
+    filePath: "https://pagalnew.com/download128/4035",
+    coverPath: "https://i.imgur.com/91G4VNt.png",
+  },
+  {
+    songName: "Mat Aazma re",
+    filePath: "https://pagalnew.com/download128/5951",
+    coverPath: "https://i.imgur.com/PI7oMAZ.png",
+  },
+  {
+    songName: "Piya aaye na",
+    filePath: "https://pagalnew.com/download128/6029",
+    coverPath: "https://i.imgur.com/AzfHsul.png",
+  },
+  {
+    songName: "Sunn rha hai",
+    filePath: "https://pagalnew.com/download128/6025",
+    coverPath: "https://i.imgur.com/AzfHsul.png",
+  },
+  {
+    songName: "Meri aashiqui tum hi ho",
+    filePath: "https://pagalnew.com/download128/6028",
+    coverPath: "https://i.imgur.com/AzfHsul.png",
+  },
+];
+
+songitem.forEach((element, i) => {
+  element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+  element.getElementsByClassName("songname")[0].innerText = songs[i].songName;
+});
+
+masterPlay.addEventListener("click", () => {
+  if (audioElement.paused || audioElement.currentTime <= 0) {
+    audioElement.play();
+    masterPlay.src = "https://i.imgur.com/YDJLY3d.png";
+    infoimage.style.opacity = 1;
+    songdesciption.style.opacity = 1;
+  } else {
+    audioElement.pause();
+    masterPlay.src = "https://i.imgur.com/UES4S3N.png";
+    infoimage.style.opacity = 0;
+    songdesciption.style.opacity = 0;
+  }
+});
+
+audioElement.addEventListener("timeupdate", () => {
+  let progress = parseInt(
+    (audioElement.currentTime / audioElement.duration) * 100
+  );
+  musicBar.value = progress;
+});
+
+musicBar.addEventListener("change", () => {
+  audioElement.currentTime = (musicBar.value * audioElement.duration) / 100;
+});
+
+const makeAllPlays = () => {
+  Array.from(document.getElementsByClassName("songitemplay")).forEach(
+    (element) => {
+      element.src = "https://i.imgur.com/UES4S3N.png";
+    }
+  );
+};
+Array.from(document.getElementsByClassName("songitemplay")).forEach(
+  (element, index) => {
+    element.addEventListener("click", (e) => {
+      if (audioElement.src.includes(songs[index].filePath)) {
+        if (audioElement.paused || audioElement.currentTime <= 0) {
+          audioElement.play();
+          songIndex = parseInt(e.target.id);
+          infoimage.style.opacity = 1;
+          masterPlay.src = "https://i.imgur.com/YDJLY3d.png";
+          songdesciption.style.opacity = 1;
+          songdesciption.innerText = songs[songIndex].songName; // Update description here
+          e.target.src = "https://i.imgur.com/YDJLY3d.png";
+          audioElement.src = songs[songIndex].filePath;
+        } else {
+          audioElement.pause();
+          masterPlay.src = "https://i.imgur.com/UES4S3N.png";
+          infoimage.style.opacity = 0;
+          songdesciption.style.opacity = 0;
+          e.src = "https://i.imgur.com/UES4S3N.png";
+        }
+      } else {
+        makeAllPlays();
+        songIndex = index;
+        audioElement.src = songs[songIndex].filePath;
+        audioElement.play();
+        e.target.src = "https://i.imgur.com/YDJLY3d.png";
+        songdesciption.innerText = songs[songIndex].songName; // Update description here
+      }
+    });
+  }
+);
+
+document.getElementById("next").addEventListener("click", () => {
+  if (songIndex >= 6) {
+    songIndex = 0;
+  } else {
+    songIndex += 1;
+  }
+
+  audioElement.play();
+  audioElement.src = songs[songIndex].filePath;
+  infoimage.style.opacity = 1;
+  masterPlay.src = "https://i.imgur.com/YDJLY3d.png";
+  songdesciption.innerText = songs[songIndex].songName;
+  masterPlay.src = "https://i.imgur.com/UES4S3N.png";
+});
+
+document.getElementById("back").addEventListener("click", () => {
+  if (songIndex <= 0) {
+    songIndex = 0;
+  } else {
+    songIndex -= 1;
+  }
+
+  audioElement.play();
+  audioElement.src = songs[songIndex].filePath;
+  infoimage.style.opacity = 1;
+  masterPlay.src = "https://i.imgur.com/YDJLY3d.png";
+  songdesciption.innerText = songs[songIndex].songName;
+  masterPlay.src = "https://i.imgur.com/UES4S3N.png";
+});
+
+    </script>
+  </body>
+</html>
